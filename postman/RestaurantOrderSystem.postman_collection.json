@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "acac5695-0301-4130-8d5e-c446243e905c",
+		"name": "RestaurantOrderSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"czhao\",\r\n    \"password\": \"welcome1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/invalidatetoken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFuIiwiZXhwIjoxNjA5MTI0NDU3LCJpYXQiOjE2MDkwODg0NTd9.72rTE5_6VjRAGhtc0cp8_tskpNOf1TedIekgccLod60",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFuIiwiZXhwIjoxNjA5MTQ2NTg5LCJpYXQiOjE2MDkxMTA1ODl9.eTgCG9Sb5kDRUVozaxJ1J-r9LtG81WcJ24T0WtRxgQE\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/invalidatetoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invalidatetoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/blockedtokens",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/blockedtokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blockedtokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/userroles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/userroles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userroles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/restaurants/SuperChanRestaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/restaurants/SuperChanRestaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"SuperChanRestaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/111",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/invoice/111",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/invoice/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"invoice",
+						"111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\": {\r\n        \"userName\": \"jslow\",\r\n        \"address\": \"123 4th Street, Up Town, WA 94688\"\r\n    },\r\n    \"orderItems\": [\r\n        {\r\n            \"quantity\": 2,\r\n            \"menuItem\": {\r\n                \"id\": 2\r\n            }\r\n        },\r\n        {\r\n            \"quantity\": 2,\r\n            \"menuItem\": {\r\n                \"id\": 4\r\n            }\r\n        },\r\n        {\r\n            \"quantity\": 2,\r\n            \"menuItem\": {\r\n                \"id\": 6\r\n            }\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/111",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pickedUp\": true,\r\n    \"delivered\": true\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/111",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxMTU0NDYwOSwiaWF0IjoxNjExNTA4NjA5fQ.m8WqrxZxy8hMcwqEIHve3ObdaD9n4U3waSJWptiKG3U"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
